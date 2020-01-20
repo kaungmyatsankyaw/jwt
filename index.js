@@ -9,7 +9,7 @@ let userRoute= require('./route/user');
 let authRoute= require('./route/auth');
 
 app.use(bodyParser.json())
-// app.use(morgan('dev'))
+app.use(morgan('dev'))
 
 
 app.use('/api', userRoute);
