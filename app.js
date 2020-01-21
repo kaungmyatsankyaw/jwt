@@ -14,14 +14,6 @@ mongoose.connect(mongoURI,{
     "useUnifiedTopology": true
 })
 
-// mongoose.set('debug',true)
-
-app.use((err, req, res, next) => {
-    res.status(err.status || 500).json({
-      message: err.message || "Something went wrong. Please try again",
-      status: err.status || 500
-    });
-  });
 
 
 app.listen(port,()=>{

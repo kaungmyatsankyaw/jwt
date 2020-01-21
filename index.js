@@ -1,5 +1,6 @@
 const express = require('express')
 const bodyParser = require('body-parser')
+const cors=require('cors');
 
 let morgan= require('morgan');
 
@@ -10,6 +11,7 @@ let authRoute= require('./route/auth');
 
 app.use(bodyParser.json())
 app.use(morgan('dev'))
+app.use(cors());
 
 
 app.use('/api', userRoute);
